@@ -3,7 +3,7 @@ package com.ohgiraffers.section03.constant;
 public class Application2 {
 
     public static void main(String[] args) {
-
+        // 24.08.26 16:00 수정 테스트
         // 24.08.26 14:50
         // 수업목표. 상수의 명명 규칙에 대해 이해할 수 있다.
 
