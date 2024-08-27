@@ -39,7 +39,13 @@ public class Application2 {
 
         // 1-3. 문자형을 int 미만의 크기의 변수에 저장할 때 강제 형변환
         char ch = 'a';
-        short snum2 = ch;
+//        short snum2 = ch;
+        // 같은 2 바이트인데 왜 강제로 해야할까? -> 문자는 음수가 없기 때문에
+        // sign bit(부호 결정 공간)도 값을 저장할 수 있는 공간으로 사용한다.
+        short snum2 = (short) ch;
+        System.out.println("snum2 = " + snum2);
+
+        // 1-4. 논리는 application1에서 한 자동형변환과 같이 강제형변환 규칙에서도 제외된다.
 
 
     }
