@@ -38,6 +38,24 @@ public class Application4 {
         System.out.println("평균 : " + avr);
 
 
+        System.out.println("===================================");
+        /*- 연습문제 1
+
+            1000kg 수용 가능한 엘리베이터에 76kg인 사람 몇 명이 탈 수 있는가?
+            같은 엘리베이터에 13명이 탄다면 평균 몸무게는?(실수로출력)
+
+            출력결과 : 13명, 76.92…….kg
+        */
+
+        int el = 1000;
+        int psn = 76;
+
+        double avr2 = (double) el / 13;
+
+        System.out.println("수용 가능 최대 인원(1인 기준 76kg) : " + (el / psn) + "명");
+        System.out.println("같은 엘리베이터에 13명이 탔다면 평균 몸무게는? : " + avr2 + "kg");
+
+
     }
 
 }
