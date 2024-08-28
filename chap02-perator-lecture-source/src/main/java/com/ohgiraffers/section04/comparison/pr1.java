@@ -31,6 +31,70 @@ public class pr1 {
         System.out.println("정현님의 BMI는 " + BMI + " 입니다.");
 
 
+        System.out.println("========== 실습 문제 1 ==========");
+        /* 실습 문제 1
+        * 주민등록번호를 숫자로 저장하고자 한다 이 값을 저장하기 위해서는
+        * 어떤 자료형(data type) ? 과 regNo 라는 이름의 변수를 선언하고
+        * 자신의 주민등록번호로 초기화 하는 한 줄의 코드를 적으시오.
+        */
+
+
+
+
+        System.out.println("========== 실습 문제 2 ==========");
+        /* 실습 문제 2
+        * 다음의 문장에서 리터럴 변수 상수 키워드를 적으시오 , , , .
+        * int i = 100;
+        * long l =100L;
+        * final float PI = 3.14f;
+
+        * 상수 :
+        * 변수 :
+        * 리터럴 :
+        */
+
+
+
+
+        System.out.println("========== 실습 문제 3 ==========");
+        /* 실습 문제 3
+        * 다음 중 형변환을 생략할 수 있는 것은 모두 고르시오 ? ( )
+            byte b = 10;
+            char ch = 'A';
+            int i = 100;
+            long l = 1000L;
+            a. b = (byte)i;
+            b. ch = (char)b;
+            c. short s = (short)ch;
+            d. float f = (float)l;
+            e. i = (int)ch;
+        */
+
+
+
+
+
+        System.out.println("========== 실습 문제 4 ==========");
+        /* 실습 문제 4
+        * 연산의 출력결과를 적으세요
+            int x = 2;
+            int y = 5;
+            char c = 'A'; // 'A' 65 의 문자코드는
+            System.out.println(1 + x << 33);
+            System.out.println(y >= 5 || x < 0 && x > 2);
+            System.out.println(y += 10 - x++);
+            System.out.println(x+=2);
+            System.out.println( !('A' <= c && c <='Z') );
+            System.out.println('C'-c);
+            System.out.println('5'-'0');
+            System.out.println(c+1);
+            System.out.println(++c);
+            System.out.println(c++);
+        */
+
+
+
+
 
     }
 
