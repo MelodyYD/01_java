@@ -44,8 +44,8 @@ public class pr1 {
         //8월 20일 B 패키지 인원 증가
         psnB = psnB + 3;
 
-        planB = ( psnA + psnB >= 8 ) || ( psnB >= pkgMinB ) ? "출발 확정" : "출발 보류";
         planA = ( psnA + psnB >= 8 ) || ( psnA >= pkgMinA ) ? "출발 확정" : "출발 보류";
+        planB = ( psnA + psnB >= 8 ) || ( psnB >= pkgMinB ) ? "출발 확정" : "출발 보류";
 
         System.out.println("8/20===================================================");
         System.out.println("A 패키지 : " + psnA + " / " + pkgMinA + " " + planA);
