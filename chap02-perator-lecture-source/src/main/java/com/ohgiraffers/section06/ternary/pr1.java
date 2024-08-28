@@ -51,10 +51,6 @@ public class pr1 {
         System.out.println("A 패키지 : " + psnA + " / " + pkgMinA + " " + planA);
         System.out.println("B 패키지 : " + psnB + " / " + pkgMinB + " " + planB);
 
-
-
-
-
     }
 
 }
