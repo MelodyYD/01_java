@@ -9,12 +9,22 @@ public class PR4 {
     */
 
     public static void main(String[] args) {
-        int lineNum = 0;
-        
+
+        int lineNum = 1;
+        PR4 score = new PR4();
+        lineNum=score.score(lineNum,"이승현",50,66,74);
+        lineNum=score.score(lineNum,"정은미",37,67,73);
+        lineNum=score.score(lineNum,"문정현",85,85,82);
+        lineNum=score.score(lineNum,"윤이정",61,34,89);
+        lineNum=score.score(lineNum,"박재민",66,88,99);
+        lineNum=score.score(lineNum,"김경훈",97,100,24);
+        lineNum=score.score(lineNum,"조평훈",0,0,0);
+
     }
 
-    public static score(int lineNum, int kor, int eng, int mth) {
-        return lineNum++;
+    public int score(int num, String name, int kor, int eng, int mth) {
+        System.out.println(num + ". " + name + " 국어: " + kor + "영어: " + eng + "수학: " + mth);
+        return ++num;
     }
 
 }
