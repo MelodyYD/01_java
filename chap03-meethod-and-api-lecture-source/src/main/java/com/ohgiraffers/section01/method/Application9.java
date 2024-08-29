@@ -31,6 +31,8 @@ public class Application9 {
         *  static 메소드도 non-static 메소드처럼 호출은 가능하다.
         *  하지만 권장하지 않는다.
         *  원래 방식이 있는데 굳이 그럴 필요가 없기 때문.
+        *  이미 메모리에 로딩이 되어 있는 static 메소드는 여러 객체가 공유하게 된다.
+        *  new 키워드로 접근을 하게 된다면 공유된 값에 예상치못한 동착을 유발할 수 있기 때문에 사용을 제한해달다는 컴퓨터 주의 문구다.
         * */
         System.out.println("min = " + min);
         System.out.println("max = " + max);
