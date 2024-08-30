@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01.method;
+package com.ohgiraffers.section01.method.pr;
 
 public class PR4 {
 
