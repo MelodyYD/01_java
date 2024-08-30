@@ -43,18 +43,18 @@ public class Application {
 
 
         // 인자로 전달한 정수 길이의 랜덤한 문자열을 출력함
-        System.out.println("");
-        System.out.println("=========== randomUpperAlphabet ===========");
-        System.out.print("원하는 랜덤 문자 길이를 입력해주세요. : ");
-        int length = sc.nextInt();
-        System.out.println("");
-        System.out.println("= = = = = = = = = Loading = = = = = = = = =");
-        System.out.println("");
-        String ranApb = rm.randomUpperAlpabet(length);
-        System.out.println("결과! : " + ranApb);
-        System.out.println("");
-        System.out.println("===========================================");
-        System.out.println("");
+//        System.out.println("");
+//        System.out.println("=========== randomUpperAlphabet ===========");
+//        System.out.print("원하는 랜덤 문자 길이를 입력해주세요. : ");
+//        int length = sc.nextInt();
+//        System.out.println("");
+//        System.out.println("= = = = = = = = = Loading = = = = = = = = =");
+//        System.out.println("");
+//        String ranApb = rm.randomUpperAlpabet(length);
+//        System.out.println("결과! : " + ranApb);
+//        System.out.println("");
+//        System.out.println("===========================================");
+//        System.out.println("");
 
 
         //가위, 바위, 보 중 한가지를 반환함
