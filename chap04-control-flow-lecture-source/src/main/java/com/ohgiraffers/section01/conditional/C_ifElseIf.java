@@ -125,4 +125,25 @@ public class C_ifElseIf {
         }
         System.out.println(name + "님의 학점은 " + grade + "입니다.");
     }
+
+    public void pr1() {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("내 몸무게가 몇이더라? : ");
+        double weight = sc.nextDouble();
+
+        if (weight > 70) {
+            System.out.println("그럼 샐러드나 먹어야 겠다...");
+        } else if (weight <= 70) {
+            System.out.print("잠깐... 치킨집이 문을 열었던가? (1. 영업 중, 2. 영업 종료) : ");
+            int answer = sc.nextInt();
+            if (answer != 1) {
+                System.out.println("아... 그냥 라면이나 먹어야겠다.");
+            } else {
+                System.out.println("아싸! 치킨 먹어야지! 오늘은 치팅이다!!!!!");
+            }
+        }
+        System.out.println("잘 먹겠습니다~");
+    }
+
 }

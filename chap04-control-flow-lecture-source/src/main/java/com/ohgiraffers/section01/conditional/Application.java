@@ -15,7 +15,13 @@ public class Application {
         C_ifElseIf cIF = new C_ifElseIf();
 //        cIF.testIfElseIfStatement();
 //        cIF.testNestedIfElseIfStatement();
-        cIF.improveNestedIfElseIfStatement();
+//        cIF.improveNestedIfElseIfStatement();
+//        cIF.pr1();
+
+        D_switch dSw = new D_switch();
+//        dSw.testSwitchStatement();
+        dSw.testSwitchVendingMachine();
+
 
     }
 
