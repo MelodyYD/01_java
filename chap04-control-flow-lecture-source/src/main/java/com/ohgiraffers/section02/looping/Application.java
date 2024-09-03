@@ -17,8 +17,15 @@ public class Application {
 //        b.printStarInputRowTimes();
 //        b.printTriangleStars();
 //        b.printReverseTriangleStars();
-//        b.testWhileStatement();
-        b.whileExample1();
+
+        C_while c = new C_while();
+//        c.testWhileStatement();
+//        c.whileExample1();
+
+        D_doWhile d = new D_doWhile();
+//        d.testDoWhileStatement();
+        d.doWhileExample();
+
 
     }
 }
