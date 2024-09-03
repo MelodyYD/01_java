@@ -9,7 +9,12 @@ public class Application {
 //        a.testForExample2();
 //        a.testForExample3();
 //        a.testForExample4();
-        a.printSimpleGugudan();
+//        a.printSimpleGugudan();
+
+        B_nestedFor b = new B_nestedFor();
+//        b.printGugudanTwoToNine();
+//        b.upgradeGugudanTwoToNine();
+        b.printStarInputRowTimes();
 
     }
 }
