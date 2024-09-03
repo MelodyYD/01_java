@@ -7,7 +7,9 @@ public class Application {
 //        a.testSimpleForStatement();
 //        a.testForExample1();
 //        a.testForExample2();
-        a.testForExample3();
+//        a.testForExample3();
+//        a.testForExample4();
+        a.printSimpleGugudan();
 
     }
 }

@@ -116,6 +116,49 @@ public class A_for {
 
     }
 
+    public void testForExample4() {
+        // 숫자 2개를 입력 받아 작은 수에서 큰 수까지의 합을 구하시오.
+        // 단, 두 숫자는 같지 않다를 가정하에 진행한다.
+        Scanner sc = new Scanner(System.in);
+        System.out.print("첫 번째 정수를 입력해주세요. : ");
+        int first = sc.nextInt();
+        System.out.print("두 번째 정수를 입력해주세요. : ");
+        int second = sc.nextInt();
+        int sum = 0;
+        if(first == second) {
+            System.out.println("두 정수가 같지 않은 숫자를 입력해 주세요.");
+        } else {
+            if (first > second) {
+                for(int i = second; i<=first; i++) {
+                    sum += i;
+                }
+                System.out.println("입력한 정수 " + first + "와/과 " + second + "수까지의 합은 " + sum + "입니다.");
+            } else if (first < second) {
+                for(int i = first; i<=second; i++) {
+                    sum += i;
+                }
+                System.out.println("입력한 정수 " + first + "와/과 " + second + "수까지의 합은 " + sum + "입니다.");
+            }
+        }
 
+    }
+    public void printSimpleGugudan() {
+        //스캐너로 2 ~ 9 사이의 구구단을 받아 2 ~ 9 사이인 경우 구구단을 출력하고,
+        //그렇지 않은 경우 "반드시 2 ~ 9 사이의 양수를 입력해주세요"를 출력해보자.
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("출력하고 싶은 구구단의 단을 입력해주세요. ( 2 ~ 9 ) : ");
+        int dan = sc.nextInt();
+
+        if (dan>=2 && dan<=9) {
+            for(int su = 1; su<=9; su++) {
+                System.out.println(dan + " * " + su + " = " + (dan * su));
+            }
+        } else {
+            System.out.println("반드시 2 ~ 9 사이의 양수를 입력해주세요.");
+        }
+
+
+    }
 
 }

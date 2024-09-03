@@ -25,10 +25,21 @@ public class Application {
 //        System.out.println("===================================================");
 //        System.out.println("");
 
-        q.q5();
-        System.out.println("");
-        System.out.println("===================================================");
-        System.out.println("");
+//        q.q5();
+//        System.out.println("");
+//        System.out.println("===================================================");
+//        System.out.println("");
+
+//        q.q6();
+//        System.out.println("");
+//        System.out.println("===================================================");
+//        System.out.println("");
+
+//        q.q7();
+//        System.out.println("");
+//        System.out.println("===================================================");
+//        System.out.println("");
+
 
     }
 
