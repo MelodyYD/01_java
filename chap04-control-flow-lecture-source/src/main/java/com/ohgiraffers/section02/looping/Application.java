@@ -14,7 +14,10 @@ public class Application {
         B_nestedFor b = new B_nestedFor();
 //        b.printGugudanTwoToNine();
 //        b.upgradeGugudanTwoToNine();
-        b.printStarInputRowTimes();
+//        b.printStarInputRowTimes();
+        b.printTriangleStars();
+        b.printReverseTriangleStars();
+
 
     }
 }

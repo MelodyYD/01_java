@@ -61,5 +61,43 @@ public class B_nestedFor {
         }
     }
 
+    // 문제 1. 키보드로 정수를 하나 입력 받아 해당 정수 만큼 한 행에 *을 행의 번호개씩 출력
+    // 문제 2. 반대로
+
+    public void printTriangleStars() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("정수를 하나 입력해주세요. : ");
+        // 몇 개까지 뽑을지 num에 저장
+        int num = sc.nextInt();
+
+        for (int row=1; row<=num; row++ ) {
+            // 몇 줄을 뽑을 건지 설정. num만큼의 줄을 뽑을 것이므로, 1부터 줄단위로 증가
+            for (int star = 1; star<=row; star++) {
+                // 별의 갯수를 지정. 몇 번째 줄인지에 따라 별의 갯수가 증가
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public void printReverseTriangleStars() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("정수를 하나 입력해주세요. : ");
+        // 몇 개까지 뽑을지 num에 저장
+        int num = sc.nextInt();
+
+        for (int row=num; row>=1; row--) {
+            // 별의 갯수만큼 처음에 뽑아야 하므로 줄 갯수인 row에 num 값 삽입
+            // 1까지 내보내야 하니 조건식 설정
+            // row는 하나씩 줄어들도록.
+            for (int star = row; star>=1; star--) {
+                //row가 줄어들 때마다 같이 맞춰주기 위해 star = row
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+
 
 }
