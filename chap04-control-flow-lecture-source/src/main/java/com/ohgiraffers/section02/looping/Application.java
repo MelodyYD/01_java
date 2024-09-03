@@ -15,9 +15,10 @@ public class Application {
 //        b.printGugudanTwoToNine();
 //        b.upgradeGugudanTwoToNine();
 //        b.printStarInputRowTimes();
-        b.printTriangleStars();
-        b.printReverseTriangleStars();
-
+//        b.printTriangleStars();
+//        b.printReverseTriangleStars();
+//        b.testWhileStatement();
+        b.whileExample1();
 
     }
 }
