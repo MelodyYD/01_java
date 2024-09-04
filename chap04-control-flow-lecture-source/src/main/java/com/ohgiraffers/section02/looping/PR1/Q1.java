@@ -285,7 +285,7 @@ public class Q1 {
         System.out.print("1.소형  2.중형  3.대형  4.SUV  5.승합  6.추천 (숫자만 입력) : ");
         int num = sc.nextInt();
         System.out.println();
-
+        
         switch (num) {
             case 1:
                 System.out.println("소형은 일일 40,000원입니다~");
