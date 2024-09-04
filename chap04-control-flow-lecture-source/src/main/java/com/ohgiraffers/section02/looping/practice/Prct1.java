@@ -31,8 +31,12 @@ public class Prct1 {
 
         //문자열 받은 걸 문자로 치환 (char)
         //치환한 알파벳의 끝으로 가면 처음으로 가도록 예외 설정
+        //아스키코드
         for (int change = num; change > 0; change--) {
             char ch = real.charAt(change);
+            if(ch>='a'||ch<='z' && ch>='A'||ch<='Z') {
+                System.out.println(ch);
+            }
         }
 
 
