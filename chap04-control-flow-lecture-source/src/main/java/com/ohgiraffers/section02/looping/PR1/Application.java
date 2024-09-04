@@ -40,6 +40,21 @@ public class Application {
 //        System.out.println("===================================================");
 //        System.out.println("");
 
+//        q.q8();
+//        System.out.println("");
+//        System.out.println("===================================================");
+//        System.out.println("");
+
+//        q.q11();
+//        System.out.println("");
+//        System.out.println("===================================================");
+//        System.out.println("");
+
+        q.q12();
+        System.out.println("");
+        System.out.println("===================================================");
+        System.out.println("");
+
 
     }
 

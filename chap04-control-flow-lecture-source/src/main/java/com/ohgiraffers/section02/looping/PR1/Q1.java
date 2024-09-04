@@ -212,41 +212,93 @@ public class Q1 {
         System.out.println("수고하셨습니다.");
     }
 
-    //8번/* 열심히 일한 람쥐가 급여를 계산해 보려고 합니다.
-    //  * 월 급여액과 월 매출액을 입력받아 급여를 산정합니다.
-    //  * 축제 운영 사원은 매출액 대비 보너스율에 명시된 보너스를, 급여 외에 추가로 지급받습니다.
-    //  *
-    //  * 단, 보너스율은 입력 받은 월 매출액에 비례하며,
-    //  * 계산된 보너스 금액을 월 급여액에 더하여 총 급여를 계산합니다.
-    //  *
-    //  * 보너스율을 적용하여 출력 예시처럼 출력되도록 프로그램을 만들어 보세요.
-    //  *
-    //  * -- 총 급여 계산식 --
-    //  * 총 급여 = 월 급여  + (매출액 * 보너스율)
-    //  *
-    //  * -- 매출액 대비 보너스율 --
-    //  *   매출액       보너스율
-    //  * 5천만원 이상      5%
-    //  * 3천만원 이상      3%
-    //  * 1천만원 이상      1%
-    //  * 1천만원 미만      0%
-    //  *
-    //  * -- 입력 예시 --
-    //  * 월 급여 입력 : 3000000
-    //  * 매출액 입력 : 20000000
-    //  *
-    //  * -- 출력 예시 --
-    //  * ======================
-    //  * 매출액 : 20000000
-    //  * 보너스율 : 1%
-    //  * 월 급여 : 3000000
-    //  * 보너스 금액 : 200000
-    //  * ======================
-    //  * 총 급여 : 3200000
-    //  * */
     //급여 계산
     public void q8() {
         Scanner sc = new Scanner(System.in);
+        System.out.println("급여 정산을 시작합니다.");
+        System.out.print("월 급여 입력 : ");
+        int month = sc.nextInt();
+        System.out.print("매출액 입력 : ");
+        int sell = sc.nextInt();
+        double bonus = 0;
 
+        if (sell<10000000) {
+            bonus = 1;
+        } else if (sell>=10000000 && sell<30000000) {
+            bonus = 0.01;
+        } else if (sell>=30000000 && sell<50000000) {
+            bonus = 0.03;
+        } else if (sell>=50000000){
+            bonus = 0.05;
+        }
+
+        int total = (int)(month + (sell * bonus));      //총급여
+
+        System.out.println();
+        System.out.println("======================");
+        System.out.println("매출액 : " + sell);
+        System.out.println("보너스율 : " + (int)(bonus*100) + "%");
+        System.out.println("월 급여 : " + month);
+        System.out.println("보너스 금액 : " + (int) (sell * bonus));
+        System.out.println("======================");
+        System.out.println("총 급여 : " + total);
     }
+
+    //놀이기구 탑승제한
+    public void q11() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("나이가 어떻게 되세요? : ");
+        int age = sc.nextInt();
+        System.out.print("키는 몇 cm이신가요? : ");
+        double height = sc.nextDouble();
+        System.out.println();
+
+        if (age<10) {
+            System.out.println("아쉽지만 9살 넘으면 또 와주세요~");
+        }
+        if (height<110) {
+            System.out.println("아쉽지만 110cm 넘게 크면 또 와주세요~");
+        }
+        System.out.println("즐거운 하루 보내세요~");
+    }
+
+    //과목 평균
+    public void q12() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("첫 번째 과목은 몇 점인가요? : ");
+        int sc1 = sc.nextInt();
+        System.out.print("두 번째 과목은 몇 점인가요? : ");
+        int sc2 = sc.nextInt();
+        System.out.println();
+
+        if(sc1 < 40 || sc2 < 40 || (sc1 + sc2) / 2 < 60) {
+            System.out.println("불합격입니다.");
+        } else {
+            System.out.println("합격입니다.");
+        }
+    }
+    /*
+        Q3. 1일간 차를 렌트하려고 하는데 차종에 따른 렌트비를 출력해보자(switch)
+        소형 : 40000원
+        중형 : 55000원
+        대형 : 80000원
+        SUV : 100000원
+        승합 : 120000원
+        - 추가 : Scanner 를 사용해서 내가 가지고 있는 예산을 입력해서
+        - 추천 하는 방식으로 해도 좋다.
+
+        Q4. Scanner 로 1 ~ 12 사이의 정수를 입력 받아 입력 한 정수에 해당하는
+              계절의 정보를 출력하시오.
+              추가적으로 겨울과 여름의 경우 온도를 입력받아
+              겨울에 경우 -15 도 이하이면 한파경보
+              -5 ~ -14 이면 한파 주의보
+              여름의 경우 33도 이상이면 폭염경보,
+              28 ~ 33 이면 폭염주의보 를 출력하시오
+    */
+    // 렌트비
+    public void q13() {
+        Scanner sc = new Scanner(System.in);
+        
+    }
+
 }
