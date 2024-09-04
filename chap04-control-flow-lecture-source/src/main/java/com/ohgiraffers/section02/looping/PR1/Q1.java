@@ -277,16 +277,54 @@ public class Q1 {
             System.out.println("합격입니다.");
         }
     }
-    /*
-        Q3. 1일간 차를 렌트하려고 하는데 차종에 따른 렌트비를 출력해보자(switch)
-        소형 : 40000원
-        중형 : 55000원
-        대형 : 80000원
-        SUV : 100000원
-        승합 : 120000원
-        - 추가 : Scanner 를 사용해서 내가 가지고 있는 예산을 입력해서
-        - 추천 하는 방식으로 해도 좋다.
 
+    // 렌트비
+    public void q13() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("안녕하세요~ 어떤 차 렌트하시겠어요?");
+        System.out.print("1.소형  2.중형  3.대형  4.SUV  5.승합  6.추천 (숫자만 입력) : ");
+        int num = sc.nextInt();
+        System.out.println();
+
+        switch (num) {
+            case 1:
+                System.out.println("소형은 일일 40,000원입니다~");
+                break;
+            case 2:
+                System.out.println("중형은 일일 55,000원입니다~");
+                break;
+            case 3:
+                System.out.println("대형은 일일 80,000원입니다~");
+                break;
+            case 4:
+                System.out.println("SUV는 일일 100,000원입니다~");
+                break;
+            case 5:
+                System.out.println("승합은 일일 120,000원입니다~");
+                break;
+            case 6:
+                System.out.print("예산이 어떻게 되시나요? : ");
+                int money = sc.nextInt();
+                if (money >= 120000) {
+                    System.out.println("그러면 승합은 어떠신가요?");
+                } else if(money >= 100000) {
+                    System.out.println("그러면 SUV는 어떠신가요?");
+                } else if(money >= 80000) {
+                    System.out.println("그러면 대형은 어떠신가요?");
+                } else if(money >= 55000) {
+                    System.out.println("그러면 중형은 어떠신가요?");
+                } else if(money >= 40000) {
+                    System.out.println("그러면 소형은 어떠신가요?");
+                } else {
+                    System.out.println("음... 은행이라도 한 번 다녀오시겠어요?");
+                }
+                break;
+            default:
+                System.out.println("그런 건 없어요~");
+        }
+        System.out.println("또 오세요~~");
+    }
+        /*
         Q4. Scanner 로 1 ~ 12 사이의 정수를 입력 받아 입력 한 정수에 해당하는
               계절의 정보를 출력하시오.
               추가적으로 겨울과 여름의 경우 온도를 입력받아
@@ -295,10 +333,6 @@ public class Q1 {
               여름의 경우 33도 이상이면 폭염경보,
               28 ~ 33 이면 폭염주의보 를 출력하시오
     */
-    // 렌트비
-    public void q13() {
-        Scanner sc = new Scanner(System.in);
-        
-    }
+    //
 
 }
