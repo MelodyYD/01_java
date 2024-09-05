@@ -20,10 +20,10 @@ public class Application {
 //        System.out.println("============================================");
 //        System.out.println();
 //
-        prct.q4();
-        System.out.println();
-        System.out.println("============================================");
-        System.out.println();
+//        prct.q4();
+//        System.out.println();
+//        System.out.println("============================================");
+//        System.out.println();
 //
 //        prct.q5();
 //        System.out.println();
@@ -35,10 +35,10 @@ public class Application {
 //        System.out.println("============================================");
 //        System.out.println();
 //
-//        prct.q7();
-//        System.out.println();
-//        System.out.println("============================================");
-//        System.out.println();
+        prct.q7();
+        System.out.println();
+        System.out.println("============================================");
+        System.out.println();
 //
 //        prct.q8();
 //        System.out.println();
