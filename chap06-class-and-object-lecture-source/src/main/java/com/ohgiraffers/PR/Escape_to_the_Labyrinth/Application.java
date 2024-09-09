@@ -1,4 +1,4 @@
-package com.ohgiraffers.section03.PR.Escape_to_the_Labyrinth;
+package com.ohgiraffers.PR.Escape_to_the_Labyrinth;
 
 import java.util.Scanner;
 
@@ -51,6 +51,10 @@ public class Application {
          * */
 
         Scanner sc = new Scanner(System.in);
+        Option opt = new Option();
+        Gold g = new Gold();
+        Labyrinth laby = new Labyrinth();
+        MiniGame mGame = new MiniGame();
 
         System.out.println("===================================================");
         System.out.println();
@@ -72,36 +76,50 @@ public class Application {
         System.out.println();
         System.out.println("게임을 시작하시겠습니까?");
         System.out.println("  1. 시작하기     2. 끝내기");
+        System.out.print("선택하기 : ");
         int ss = sc.nextInt();
+
         if (ss == 2) {
-            System.out.println();
-            System.out.println("===================================================");
-            System.out.println();
-            System.out.println("                      아쉽네요.");
-            System.out.println("                  게임이 종료됩니다.");
-            System.out.println();
-            System.out.println("===================================================");
-            System.out.println();
+            opt.endGame(name);
+//            System.out.println();
+//            System.out.println("===================================================");
+//            System.out.println();
+//            System.out.println("                      아쉽네요.");
+//            System.out.println("                  게임이 종료됩니다.");
+//            System.out.println("                  또 봐요, " + name + "님.");
+//            System.out.println();
+//            System.out.println("===================================================");
+//            System.out.println();
         } else if (ss == 1) {
             while (true) {
-                Option opt = new Option();
-                Gold g = new Gold();
-                Labyrinth laby = new Labyrinth();
-                MiniGame mGame = new MiniGame();
-
                 opt.defaultOption();
-                int noDef = sc.nextInt();
-                switch (noDef) {
+                int numDef = sc.nextInt();
+                if(numDef == 9) {
+                    break;
+                }
+                switch (numDef) {
                     case 1:
                         break;
 
                     case 2:
-                        opt.goldChack();
-                        int noGold = sc.nextInt();
-                        switch (noGold) {
-                            case 1:
-                                System.out.println("현재 ");
+                        while(true) {
+                            opt.goldChack();
+                            int numGold = sc.nextInt();
+                            if(numGold == 2) {
+                                break;
+                            }
+                            switch (numGold) {
+                                case 1:
+                                    System.out.println("현재 " + name + "님이 가지고 있는 골드는 총 " + g.goldState() + " Gold 입니다.");
+                                    break;
+                                case 3:
+                                    break;
+                            }
                         }
+                        System.out.println("뒤로 돌아갑니다.");
+                        System.out.println();
+                        System.out.println("===================================================");
+                        System.out.println();
                         break;
 
                     case 3:
@@ -110,9 +128,6 @@ public class Application {
                     default:
                         break;
                 }
-//                if() {
-                break;
-//                }
             }
             System.out.println();
             System.out.println("===================================================");

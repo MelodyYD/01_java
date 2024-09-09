@@ -1,4 +1,4 @@
-package com.ohgiraffers.section03.PR.Escape_to_the_Labyrinth;
+package com.ohgiraffers.PR.Escape_to_the_Labyrinth;
 
 public class Option {
 
@@ -7,8 +7,21 @@ public class Option {
         System.out.println("   1. 길 찾기");
         System.out.println("   2. 골드 확인");
         System.out.println("   3. 처음으로(10G)");
+        System.out.println("   9. 게임 종료");
         System.out.println();
         System.out.print("메뉴를 선택해주세요 : ");
+    }
+
+    public void endGame(String name) {
+        System.out.println();
+        System.out.println("===================================================");
+        System.out.println();
+        System.out.println("                      아쉽네요.");
+        System.out.println("                  게임이 종료됩니다.");
+        System.out.println("                   또 봐요, " + name + "님.");
+        System.out.println();
+        System.out.println("===================================================");
+        System.out.println();
     }
 
     private Gold g = new Gold();
@@ -33,6 +46,10 @@ public class Option {
 
     public void startBack() {
         // 3. 처음으로(10G)
+    }
+
+    public void escapeLabirinth() {
+        System.out.println();
     }
 
 }

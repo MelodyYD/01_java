@@ -1,4 +1,4 @@
-package com.ohgiraffers.section03.PR.Escape_to_the_Labyrinth;
+package com.ohgiraffers.PR.Escape_to_the_Labyrinth;
 
 public class Gold {
     private int gold;
