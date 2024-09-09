@@ -56,19 +56,14 @@ public class Application {
         Labyrinth laby = new Labyrinth();
         MiniGame mGame = new MiniGame();
 
-        System.out.println("===================================================");
-        System.out.println();
+        line();
         System.out.println("================== 미로 탈출 게임~ ==================");
-        System.out.println();
-        System.out.println("===================================================");
-        System.out.println();
+        line();
         System.out.println("당신은 지금 어떤 미로에 도착했습니다.");
         System.out.println("출구로 향하거나, 골드를 모아 탈출하세요!");
         System.out.println();
 
-        System.out.println();
-        System.out.println("===================================================");
-        System.out.println();
+        line();
         System.out.print("플레이어의 이름을 입력해주세요. : ");
         String name = sc.nextLine();
         System.out.println();
@@ -76,22 +71,15 @@ public class Application {
         System.out.println();
         System.out.println("게임을 시작하시겠습니까?");
         System.out.println("  1. 시작하기     2. 끝내기");
-        System.out.print("선택하기 : ");
+        System.out.print("선택 : ");
         int ss = sc.nextInt();
 
         if (ss == 2) {
             opt.endGame(name);
-//            System.out.println();
-//            System.out.println("===================================================");
-//            System.out.println();
-//            System.out.println("                      아쉽네요.");
-//            System.out.println("                  게임이 종료됩니다.");
-//            System.out.println("                  또 봐요, " + name + "님.");
-//            System.out.println();
-//            System.out.println("===================================================");
-//            System.out.println();
+
         } else if (ss == 1) {
             while (true) {
+                line();
                 opt.defaultOption();
                 int numDef = sc.nextInt();
                 if(numDef == 9) {
@@ -111,15 +99,14 @@ public class Application {
                             switch (numGold) {
                                 case 1:
                                     System.out.println("현재 " + name + "님이 가지고 있는 골드는 총 " + g.goldState() + " Gold 입니다.");
+                                    line();
                                     break;
                                 case 3:
                                     break;
                             }
                         }
                         System.out.println("뒤로 돌아갑니다.");
-                        System.out.println();
-                        System.out.println("===================================================");
-                        System.out.println();
+                        line();
                         break;
 
                     case 3:
@@ -129,16 +116,16 @@ public class Application {
                         break;
                 }
             }
-            System.out.println();
-            System.out.println("===================================================");
-            System.out.println();
-            System.out.println("                     탈출 성공!");
-            System.out.println();
-            System.out.println("===================== The End =====================");
-            System.out.println();
+//            opt.finishGame(); //탈출 성공
 
         }
 
+    }
+
+    public static void line () {
+        System.out.println();
+        System.out.println("===================================================");
+        System.out.println();
     }
 
 }

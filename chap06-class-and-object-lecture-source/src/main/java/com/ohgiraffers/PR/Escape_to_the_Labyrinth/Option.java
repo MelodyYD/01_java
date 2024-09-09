@@ -3,6 +3,7 @@ package com.ohgiraffers.PR.Escape_to_the_Labyrinth;
 public class Option {
 
     public void defaultOption() {
+        line();
         System.out.println(" 무엇을 하시겠습니까?");
         System.out.println("   1. 길 찾기");
         System.out.println("   2. 골드 확인");
@@ -13,15 +14,17 @@ public class Option {
     }
 
     public void endGame(String name) {
-        System.out.println();
-        System.out.println("===================================================");
-        System.out.println();
+        line();
         System.out.println("                      아쉽네요.");
         System.out.println("                  게임이 종료됩니다.");
         System.out.println("                   또 봐요, " + name + "님.");
-        System.out.println();
-        System.out.println("===================================================");
-        System.out.println();
+        line();
+    }
+
+    public void finishGame () {
+        line();
+        System.out.println("                     탈출 성공!");
+        line();
     }
 
     private Gold g = new Gold();
@@ -34,6 +37,7 @@ public class Option {
 
     public void goldChack() {
         // 2. 골드 확인
+        line();
         System.out.println(" 무엇을 하시겠습니까?");
         System.out.println("   1. 내 잔여 골드 확인");
         System.out.println("   2. 뒤로 가기");
@@ -49,6 +53,13 @@ public class Option {
     }
 
     public void escapeLabirinth() {
+        System.out.println();
+    }
+
+
+    public static void line () {
+        System.out.println();
+        System.out.println("===================================================");
         System.out.println();
     }
 
