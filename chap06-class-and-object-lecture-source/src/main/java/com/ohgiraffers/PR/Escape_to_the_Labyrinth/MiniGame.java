@@ -29,7 +29,7 @@ public class MiniGame {
             }
             switch (userRps) {
                 case 1:
-                    if ()
+//                    if ()
             }
         }
     }
