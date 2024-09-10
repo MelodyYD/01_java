@@ -110,6 +110,7 @@ public class Application {
                         break;
 
                     case 3:
+                        opt.startBack();
                         break;
 
                     default:

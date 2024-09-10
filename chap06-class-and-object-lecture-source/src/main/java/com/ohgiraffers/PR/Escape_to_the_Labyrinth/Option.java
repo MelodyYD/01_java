@@ -50,12 +50,14 @@ public class Option {
 
     public void startBack() {
         // 3. 처음으로(10G)
+        g.goldDownStart(10);
+        line();
+        //처음 장소로 이동하는 거 선언하기
     }
 
-    public void escapeLabirinth() {
-        System.out.println();
-    }
-
+//    public void escapeLabirinth() {
+//        System.out.println();
+//    }
 
     public static void line () {
         System.out.println();

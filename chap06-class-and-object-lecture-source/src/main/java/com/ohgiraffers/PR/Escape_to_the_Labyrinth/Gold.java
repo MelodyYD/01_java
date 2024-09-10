@@ -2,21 +2,24 @@ package com.ohgiraffers.PR.Escape_to_the_Labyrinth;
 
 public class Gold {
     private int gold;
-    private int change;
 
     public int goldState () {
         // 내 골드 현황 확인
         return gold;
     }
 
-    public void goldUp () {
+    public void setGold(int change) {
         // 골드 추가 획득
+        this.gold += change;
     }
 
-    public void goldDownStart () {
+    public void goldDownStart (int change) {
         // 골드 사용 - 처음으로
+        this.gold -= change;
     }
-    public void goldDownEnd () {
+
+    public void goldDownEnd (int change) {
         // 골드 사용 - 탈출
+        this.gold -= change;
     }
 }
