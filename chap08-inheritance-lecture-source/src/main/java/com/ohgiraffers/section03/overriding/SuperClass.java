@@ -13,4 +13,14 @@ public class SuperClass {
     *   7. 예외처리는 같은 예외이거나, 더 구체적(하위)인 예외를 다루어야 한다.
     * */
 
+    public void method(int num) {}
+
+    private void privateMethod() {}
+
+    public final void finalMethod() {}
+
+    protected void protectedMethod() {}
+
+
+
 }
