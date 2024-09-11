@@ -71,6 +71,8 @@ public class Application {
         fireCar.sprayWater();
 
 
+        System.out.println('\'');
+        System.out.println("'");
 
     }
 
