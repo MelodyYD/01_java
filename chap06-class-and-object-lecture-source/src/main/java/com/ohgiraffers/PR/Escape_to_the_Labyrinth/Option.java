@@ -55,9 +55,14 @@ public class Option {
         //처음 장소로 이동하는 거 선언하기
     }
 
-//    public void escapeLabirinth() {
-//        System.out.println();
-//    }
+    public void escapeLabirinth() {
+        // 골드로 탈출
+        finishGame();
+        System.out.println("              역시 뭐든 돈이 최고네요. :)              ");
+        System.out.println("              다음 방문을 기다리겠습니다.");
+        System.out.println("                  좋은 하루 되세요~!         ");
+        line();
+    }
 
     public static void line () {
         System.out.println();

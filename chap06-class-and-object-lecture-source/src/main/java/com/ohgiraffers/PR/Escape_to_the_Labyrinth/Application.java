@@ -76,10 +76,8 @@ public class Application {
 
         if (ss == 2) {
             opt.endGame(name);
-
         } else if (ss == 1) {
             while (true) {
-                line();
                 opt.defaultOption();
                 int numDef = sc.nextInt();
                 if(numDef == 9) {
@@ -88,7 +86,6 @@ public class Application {
                 switch (numDef) {
                     case 1:
                         break;
-
                     case 2:
                         while(true) {
                             opt.goldChack();
@@ -102,6 +99,10 @@ public class Application {
                                     line();
                                     break;
                                 case 3:
+                                    opt.escapeLabirinth();
+                                    break;
+                                default:
+                                    System.out.println("잘못 입력했습니다. 다시 입력해 주세요.");
                                     break;
                             }
                         }
@@ -114,6 +115,7 @@ public class Application {
                         break;
 
                     default:
+                        System.out.println("잘못 입력했습니다. 다시 입력해 주세요.");
                         break;
                 }
             }
@@ -128,5 +130,7 @@ public class Application {
         System.out.println("===================================================");
         System.out.println();
     }
+
+
 
 }
