@@ -1,6 +1,11 @@
 package com.ohgiraffers.PR.Escape_to_the_Labyrinth;
 
+import java.util.Scanner;
+
+import static java.lang.System.exit;
+
 public class Option {
+    Scanner sc = new Scanner(System.in);
 
     public void defaultOption() {
         line();
@@ -11,6 +16,54 @@ public class Option {
         System.out.println("   9. 게임 종료");
         System.out.println();
         System.out.print("메뉴를 선택해주세요 : ");
+    }
+
+    public void startGame(String name) {
+        while (true) {
+            defaultOption();
+            int numDef = sc.nextInt();
+            if(numDef == 9) {
+                break;
+            } else if(numDef == 3) {
+                startBack();
+                break;
+            }
+            subDetOpt(numDef, name);
+        }
+    }
+
+    public void subDetOpt(int numDef, String name) {
+        switch (numDef) {
+            case 1:
+                // 미궁 탐험 시작
+                break;
+            case 2:
+                goldChkOpt(name);
+                break;
+            default:
+                System.out.println("잘못 입력했습니다. 다시 입력해 주세요.");
+                break;
+        }
+    }
+
+    public void goldChkOpt (String name) {
+        while(true) {
+            goldChack();
+            int numGold = sc.nextInt();
+            if (numGold == 1) {
+                System.out.println("현재 " + name + "님이 가지고 있는 골드는 총 " + g.goldState() + " Gold 입니다.");
+                line();
+            } else if(numGold == 2) {
+                System.out.println("뒤로 돌아갑니다.");
+                line();
+                break;
+            } else if(numGold == 3) {
+                escapeLabirinth();
+                exit(0);
+            } else {
+                System.out.println("잘못 입력했습니다. 다시 입력해 주세요.");
+            }
+        }
     }
 
     public void endGame(String name) {
@@ -50,6 +103,7 @@ public class Option {
 
     public void startBack() {
         // 3. 처음으로(10G)
+        System.out.println("처음으로 되돌아갑니다.");
         g.goldDownStart(10);
         line();
         //처음 장소로 이동하는 거 선언하기
