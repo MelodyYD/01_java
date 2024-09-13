@@ -32,15 +32,15 @@ public class Application1 {
         * */
 
         int intValue = 20;      //기본 타입
-        Integer boxingNumber = new Integer(intValue);   //인스턴스화 - 박싱
-        Integer boxingNumber2 = Integer.valueOf(boxingNumber);
+//        Integer boxingNumber = new Integer(intValue);   //인스턴스화 - 박싱
+//        Integer boxingNumber2 = Integer.valueOf(boxingNumber);
 
-        System.out.println("boxingNumber: " + boxingNumber);
-        System.out.println("boxingNumber2: " + boxingNumber2);
+//        System.out.println("boxingNumber: " + boxingNumber);
+//        System.out.println("boxingNumber2: " + boxingNumber2);
 
         //Unboxing -> 인스턴스화 된 값을 기본으로 변경
-        int unBoxingNumber = boxingNumber;
-        System.out.println("unBoxingNumber: " + unBoxingNumber);
+//        int unBoxingNumber = boxingNumber;
+//        System.out.println("unBoxingNumber: " + unBoxingNumber);
 
         /* 필기.
         *   오토 박싱(Auto Boxing) 오토 언박싱(Auto UnBoxing)

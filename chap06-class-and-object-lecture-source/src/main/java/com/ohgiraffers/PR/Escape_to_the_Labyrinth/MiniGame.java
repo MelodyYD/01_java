@@ -3,6 +3,8 @@ package com.ohgiraffers.PR.Escape_to_the_Labyrinth;
 import java.util.Random;
 import java.util.Scanner;
 
+Gold g = new Gold();
+
 public class MiniGame {
 
     public void miniGameRPSStart() {
@@ -12,11 +14,11 @@ public class MiniGame {
         System.out.println("                    가위바위보 게임!");
         System.out.println("        가위바위보 대결을 통하여 골드를 획득해 보세요!");
         System.out.println();
+        miniGameRPS();
     }
 
     public void miniGameRPS() {
         Scanner sc = new Scanner(System.in);
-        Gold g = new Gold();
         while(true) {
             System.out.println("  1.가위   2.바위   3.보");
             System.out.print("안내면 진다~ 가위 바위 보! : ");
@@ -28,20 +30,24 @@ public class MiniGame {
                 System.out.println("잘못 입력하였습니다.");
                 System.out.println("다시 입력해주세요.");
             }
-            switch (userRps) {
-                case 1:
-                    test(userRps,rockPaperScissors());
-                    if (rockPaperScissors() == 1) {
-                        System.out.println("비겼습니다! 아쉽네요! 다시 도전해 보세요!");
-                        break;
-                    } else if (rockPaperScissors() == 2) {
-                        System.out.println("아아...!! 졌습니다!");
-                        System.out.println("아쉽지만 다음에는 꼭 이길 수 있기를.");
-                        int loseGold = loseGold();
-                        System.out.println("당신에게 " + loseGold + "G가 주어집니다.");
-                        g.setGold(loseGold);
-                    }
-            }
+            userRPS(userRps);
+        }
+    }
+
+    public void userRPS(int userRps) {
+        switch (userRps) {
+            case 1:
+                test(userRps,rockPaperScissors());
+                if (rockPaperScissors() == 1) {
+                    System.out.println("비겼습니다! 아쉽네요! 다시 도전해 보세요!");
+                    break;
+                } else if (rockPaperScissors() == 2) {
+                    System.out.println("아아...!! 졌습니다!");
+                    System.out.println("아쉽지만 다음에는 꼭 이길 수 있기를.");
+                    int loseGold = loseGold();
+                    System.out.println("당신에게 " + loseGold + "G가 주어집니다.");
+                    g.setGold(loseGold);
+                }
         }
     }
 
