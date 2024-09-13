@@ -2,7 +2,11 @@ package com.ohgiraffers.PR.Escape_to_the_Labyrinth;
 
 import java.util.Scanner;
 
+import static java.lang.System.exit;
+
 public class Application {
+
+    public static String name;
 
     public static void main(String[] args) {
         /* 프로그램 개요.
@@ -65,7 +69,7 @@ public class Application {
 
         line();
         System.out.print("플레이어의 이름을 입력해주세요. : ");
-        String name = sc.nextLine();
+        name = sc.nextLine();
         System.out.println();
         System.out.println("어서 오세요, " + name + "님!");
         System.out.println();

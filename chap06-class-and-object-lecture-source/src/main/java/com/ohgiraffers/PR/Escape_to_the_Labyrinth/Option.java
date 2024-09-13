@@ -7,6 +7,11 @@ import static java.lang.System.exit;
 public class Option {
     Scanner sc = new Scanner(System.in);
 
+    private Gold g = new Gold();
+    private Labyrinth laby = new Labyrinth();
+    private MiniGame mGame = new MiniGame();
+
+
     public void defaultOption() {
         line();
         System.out.println(" 무엇을 하시겠습니까?");
@@ -54,7 +59,9 @@ public class Option {
                 System.out.println("현재 " + name + "님이 가지고 있는 골드는 총 " + g.goldState() + " Gold 입니다.");
                 line();
             } else if(numGold == 2) {
-                System.out.println("뒤로 돌아갑니다.");
+                g.setGold(mGame.miniGameRPSStart());
+
+//                System.out.println("뒤로 돌아갑니다.");
                 line();
                 break;
             } else if(numGold == 3) {
@@ -79,10 +86,6 @@ public class Option {
         System.out.println("                     탈출 성공!");
         line();
     }
-
-    private Gold g = new Gold();
-    private Labyrinth laby = new Labyrinth();
-    private MiniGame mGame = new MiniGame();
 
     public void labyrinthOption() {
         // 1. 길 찾기
