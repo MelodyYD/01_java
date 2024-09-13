@@ -3,9 +3,9 @@ package com.ohgiraffers.PR.Escape_to_the_Labyrinth;
 import java.util.Random;
 import java.util.Scanner;
 
-Gold g = new Gold();
-
 public class MiniGame {
+
+    Gold g = new Gold();
 
     public void miniGameRPSStart() {
         line();
@@ -28,27 +28,57 @@ public class MiniGame {
             if (userRps != 1 && userRps != 2 && userRps != 3) {
                 System.out.println();
                 System.out.println("잘못 입력하였습니다.");
-                System.out.println("다시 입력해주세요.");
+                System.out.println("다시 입력해주세요!");
+                line();
             }
             userRPS(userRps);
+
         }
     }
 
     public void userRPS(int userRps) {
         switch (userRps) {
             case 1:
-                test(userRps,rockPaperScissors());
                 if (rockPaperScissors() == 1) {
                     System.out.println("비겼습니다! 아쉽네요! 다시 도전해 보세요!");
                     break;
                 } else if (rockPaperScissors() == 2) {
-                    System.out.println("아아...!! 졌습니다!");
-                    System.out.println("아쉽지만 다음에는 꼭 이길 수 있기를.");
-                    int loseGold = loseGold();
-                    System.out.println("당신에게 " + loseGold + "G가 주어집니다.");
-                    g.setGold(loseGold);
+                    rpsLose(userRps,rockPaperScissors());
+                    break;
+                } else if (rockPaperScissors() == 3) {
+                    rpsWin(userRps,rockPaperScissors());
                 }
         }
+    }
+
+    public void rpsWin (int userRps, int rockPaperScissors) {
+        String ranRPS = changeRPS(rockPaperScissors);
+        String usrRPS = changeRPS(userRps);
+
+        System.out.println("과연 결과는...!");
+        line();
+        System.out.println("님이 낸 패 : " + usrRPS);
+        System.out.println("미궁이 낸 패 : " + ranRPS);
+        line();
+        System.out.println("승리~!!!");
+        int winGold = winGold();
+        System.out.println("당신에게 " + winGold + "G가 주어집니다.");
+        g.setGold(winGold);
+    }
+
+    public void rpsLose (int userRps, int rockPaperScissors) {
+        String ranRPS = changeRPS(rockPaperScissors);
+        String usrRPS = changeRPS(userRps);
+
+        System.out.println("과연 결과는...!");
+        line();
+        System.out.println("님이 낸 패 : " + usrRPS);
+        System.out.println("미궁이 낸 패 : " + ranRPS);
+        line();
+        System.out.println("패배...");
+        int loseGold = loseGold();
+        System.out.println("당신에게 " + loseGold + "G가 주어집니다.");
+        g.setGold(loseGold);
     }
 
     //미니게임(가위바위보) 만들기
@@ -63,13 +93,13 @@ public class MiniGame {
         return ranRps;
     }
 
-    public void test(int userRps, int ranNum) {
-//        String name = Application.name;
-        line();
-        System.out.println("님이 낸 패 : " + changeRPS(userRps));
-        System.out.println("미궁이 낸 패 : " + changeRPS(ranNum));
-        System.out.println();
-    }
+//    public void test(int userRps, int ranNum) {
+////        String name = Application.name;
+//        line();
+//        System.out.println("님이 낸 패 : " + changeRPS(userRps));
+//        System.out.println("미궁이 낸 패 : " + changeRPS(ranNum));
+//        System.out.println();
+//    }
 
     public int winGold() {
         Random winRand = new Random();
