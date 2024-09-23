@@ -15,12 +15,18 @@ public class BookManager {
     public void addBook(BookDTO book) {
         booklist.add(book);
         System.out.println("도서 등록이 완료되었습니다.");
+        System.out.println();
         // 전달받은 도서정보를 필드에 선언한 List 에 담는다.
         // 해당 BookDTO 객체를 리스트에 담기
     }
 
     public void deleteBook(int key) {
-
+        if(key>=0 && key<booklist.size()) {
+            booklist.remove(key);
+            System.out.println(key + "번 도서를 삭제하였습니다.");
+        } else {
+            System.out.println("입력한 번호의 도서는 존재하지 않습니다.");
+        }
         // 전달받은 도서번호를 이용하여 해당하는 인덱스에 도서를 제거한다.
     }
 

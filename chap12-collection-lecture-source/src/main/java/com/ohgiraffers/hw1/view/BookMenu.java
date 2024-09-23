@@ -14,9 +14,9 @@ public class BookMenu {
 
     public void mainMenu() {
         int choice;
+        System.out.println("*** 도서 관리 프로그램 ***");
+        System.out.println();
         do {
-            System.out.println("*** 도서 관리 프로그램 ***");
-            System.out.println();
             System.out.println("1. 새 도서 추가");
             System.out.println("2. 도서정보 정렬 후 출력 (사용 안함)");
             System.out.println("3. 도서 삭제");
@@ -25,7 +25,7 @@ public class BookMenu {
             System.out.println("6. 끝내기");
             System.out.print("\n조작할 메뉴 번호를 입력해주세요. : ");
             choice = sc.nextInt();
-            System.out.println();
+            sc.nextLine();
 
             switch (choice) {
                 case 1:
@@ -33,21 +33,26 @@ public class BookMenu {
                     break;
                 case 2:
                     System.out.println("해당 메뉴는 사용하실 수 없습니다.");
+                    System.out.println();
                     break;
                 case 3:
                     bm.deleteBook(inputBookNo());
+                    System.out.println();
                     break;
                 case 4:
                     bm.searchBook(inputBookTitle());
+                    System.out.println();
                     break;
                 case 5:
                     bm.displayAll();
+                    System.out.println();
                     break;
                 case 6:
                     System.out.println("프로그램을 종료합니다.");
                     break;
                 default:
                     System.out.println("잘못된 번호를 입력하셨습니다.");
+                    System.out.println();
                     break;
             }
         } while (choice != 6);
@@ -74,15 +79,13 @@ public class BookMenu {
         System.out.print("삭제할 도서 번호 : ");
         int bNo = sc.nextInt();
         sc.nextLine();
-        System.out.println("\n" + bNo + "번 도서가 삭제되었습니다.");
-        return (bNo-1);
+        return bNo;
     }
 
     public String inputBookTitle() {
         //검색할 도서제목을 키보드로 입력 받아 리턴
         System.out.print("도서 제목 : ");
         String title = sc.nextLine();
-        System.out.println("\n" + title + " 도서를 등록했습니다.");
         return title;
     }
 
