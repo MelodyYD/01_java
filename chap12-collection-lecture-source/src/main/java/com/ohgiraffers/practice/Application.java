@@ -33,10 +33,10 @@ public class Application {
         Scanner sc = new Scanner(System.in);
 
         List books = new ArrayList();
-        books.add(new BookDTO(100, "Apple", "aaa", 10000));
-        books.add(new BookDTO(200, "Banana", "bbb", 20000));
-        books.add(new BookDTO(300, "Carrot", "ccc", 30000));
-        books.add(new BookDTO(400, "Durian", "ddd", 40000));
+        books.add(new BookDTO2(100, "Apple", "aaa", 10000));
+        books.add(new BookDTO2(200, "Banana", "bbb", 20000));
+        books.add(new BookDTO2(300, "Carrot", "ccc", 30000));
+        books.add(new BookDTO2(400, "Durian", "ddd", 40000));
 
         for (int i = 0; i < books.size(); i++) {
             System.out.println(books.get(i));
@@ -65,7 +65,7 @@ public class Application {
         sc.nextLine();
         System.out.println();
 
-        books.add(2,new BookDTO(num, name, aut, pie));
+        books.add(2,new BookDTO2(num, name, aut, pie));
 
         for (Object s : books) {
             System.out.println(s);

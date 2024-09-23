@@ -1,6 +1,6 @@
 package com.ohgiraffers.practice;
 
-public class BookDTO {
+public class BookDTO2 {
 
     //책 번호, 책 이름, 책 저자, 책 가격
     private int bookNo;
@@ -8,13 +8,16 @@ public class BookDTO {
     private String bookAuthor;
     private int bookPrice;
 
-    public BookDTO() {}
+    public BookDTO2() {}
 
-    public BookDTO(int bookNo, String bookName, String bookAuthor, int bookPrice) {
+    public BookDTO2(int bookNo, String bookName, String bookAuthor, int bookPrice) {
         this.bookNo = bookNo;
         this.bookName = bookName;
         this.bookAuthor = bookAuthor;
         this.bookPrice = bookPrice;
+    }
+
+    public BookDTO2(String title, int category, String author) {
     }
 
     public int getBookNo() {
