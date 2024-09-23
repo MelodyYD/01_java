@@ -37,9 +37,9 @@ public class Application {
         // 2 개의 정수, 1 개의 사칙연산 기호를 받는다.
         System.out.println("정수 계산기 가동!");
         System.out.print("첫 번째 정수 : ");
-        if (!sc.hasNextInt()) {
-            throw new NotIntegerNum("정수를 입력해 주세요.");
-        }
+//        if (!sc.hasNextInt()) {
+//            throw new NotIntegerNum("정수를 입력해 주세요.");
+//        }
         int firstNum = sc.nextInt();
         System.out.print("계산하려는 사칙연산 : ");
         char operator = sc.next().charAt(0);
@@ -62,11 +62,11 @@ public class Application {
             // MultipleNotZeroException 발생
             System.out.println(e.getMessage());
 
-        } catch (NotIntegerNum f) {
-            // firstNum 혹은 secondNum 이 정수 값이 아니라면?
-            // NotIntegerNum 발생
-            System.out.println(f.getMessage());
-        }
+        } //catch (NotIntegerNum f) {
+//            // firstNum 혹은 secondNum 이 정수 값이 아니라면?
+//            // NotIntegerNum 발생
+//            System.out.println(f.getMessage());
+//        }
 
 
         System.out.println();
